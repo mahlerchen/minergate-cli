@@ -5,7 +5,8 @@ LABEL description="running minergate console using docker container by http://bi
 RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
-    wget && \
+    wget \
+    nvidia-375 && \
     rm -rf /var/lib/apt/lists/*
     
 RUN wget https://minergate.com/download/deb-cli && \
