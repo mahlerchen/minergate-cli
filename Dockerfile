@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
     wget \
-    nvidia-375 && \
+    nvidia-384 && \
     rm -rf /var/lib/apt/lists/*
     
 RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \       
