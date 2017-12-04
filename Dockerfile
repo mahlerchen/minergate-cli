@@ -5,6 +5,7 @@ LABEL description="running minergate console using docker container by http://bi
 RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
+    gnupg2 \
     wget && \
     rm -rf /var/lib/apt/lists/*
     
