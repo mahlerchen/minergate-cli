@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM ubuntu:17.10
 MAINTAINER BitBuyIO <bitbuyio@outlook.com>
 LABEL description="running minergate console using docker container by http://bit.ly/docker-minergate"
 
