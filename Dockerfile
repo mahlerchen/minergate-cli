@@ -9,8 +9,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
     
 RUN wget https://minergate.com/download/deb-cli && \
-    # wget -q --content-disposition https://minergate.com/download/deb-cli && \
-    dpkg -i *.deb && \
+    dpkg -i deb-cli && \
     rm *.deb
 
 ENV USER bitbuyio@outlook.com
