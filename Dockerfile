@@ -1,11 +1,10 @@
-FROM debian:stable-slim
+FROM ubuntu:16.04
 MAINTAINER BitBuyIO <bitbuyio@outlook.com>
 LABEL description="running minergate console using docker container by http://bit.ly/docker-minergate"
 
 RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
-    gnupg2 \
     wget && \
     rm -rf /var/lib/apt/lists/*
     
