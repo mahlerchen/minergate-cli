@@ -8,8 +8,8 @@ RUN apt-get update && \
     wget && \
     rm -rf /var/lib/apt/lists/*
     
-RUN wget https://minergate.com/download/deb-cli && \
-    dpkg -i deb-cli && \
+RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \       
+    dpkg -i *.deb && \
     rm *.deb
 
 ENV USER bitbuyio@outlook.com
