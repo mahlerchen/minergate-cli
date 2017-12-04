@@ -2,7 +2,7 @@ FROM debian:stable-slim
 MAINTAINER BitBuyIO <bitbuyio@outlook.com>
 LABEL description="running minergate console using docker container by http://bit.ly/docker-minergate"
 
-RUN apt update && \
+RUN apt update
 RUN apt -qq --no-install-recommends  install \
     ca-certificates \
     wget
