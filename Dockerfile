@@ -5,6 +5,8 @@ LABEL description="running minergate console using docker container by http://bi
 RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
+    libxcb1 \
+    libpcre16-3 \
     wget && \
     rm -rf /var/lib/apt/lists/*
     
@@ -15,4 +17,4 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
 ENV USERNAME minergate@mmink.eu
 ENV COIN -xmr
 
-ENTRYPOINT nice -18 minergate-cli -user $USERNAME $COIN
+ENTRYPOINT nice -10 minergate-cli -user $USERNAME $COIN
