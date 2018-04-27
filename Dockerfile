@@ -12,7 +12,7 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
     dpkg -i *.deb && \
     rm *.deb
 
-ENV USERNAME bitbuyio@outlook.com
+ENV USERNAME minergate@mmink.eu
 ENV COIN -xmr
 
 ENTRYPOINT nice -18 minergate-cli -user $USERNAME $COIN
