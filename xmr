@@ -7,7 +7,7 @@ RUN apt-get update && \
     ca-certificates \
     libxcb1 \
     libpcre16-3 \
-    libopencl1 \
+    ocl-icd-libopencl1 \
     wget && \
     rm -rf /var/lib/apt/lists/*
 
