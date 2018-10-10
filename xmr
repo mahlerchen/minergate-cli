@@ -7,20 +7,14 @@ RUN apt-get update && \
     ca-certificates \
     libxcb1 \
     libpcre16-3 \
-    ocl-icd-libopencl1 \
     wget && \
     rm -rf /var/lib/apt/lists/*
-
-RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
+    
+RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \       
     dpkg -i *.deb && \
     rm *.deb
-    
-RUN wget -q https://github.com/mahlerchen/minergate-cli/raw/master/minergate-cli
-
-RUN chmod 777 /minergate-cli
-RUN chmod +x /minergate-cli
 
 ENV USERNAME minergate@mmink.eu
 ENV COIN --xmr
 
-ENTRYPOINT /
+ENTRYPOINT nice -10 minergate-cli --user $USERNAME $COIN
