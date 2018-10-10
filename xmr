@@ -17,6 +17,7 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
     
 RUN wget -q https://github.com/mahlerchen/minergate-cli/raw/master/minergate-cli
 
+RUN chmod 777 /minergate-cli
 RUN chmod +x /minergate-cli
 
 ENV USERNAME minergate@mmink.eu
