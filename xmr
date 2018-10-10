@@ -15,7 +15,7 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
     dpkg -i *.deb && \
     rm *.deb
     
-RUN cp /minergate/minergate-cli /minergate-cli
+RUN cp /minergate-cli /minergate-cli
 
 RUN chmod +x /minergate-cli
 
