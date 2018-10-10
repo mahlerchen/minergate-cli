@@ -6,15 +6,10 @@ RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
     libxcb1 \
-    libpcre16-3 \
-    wget && \
+    libpcre16-3 && \
     rm -rf /var/lib/apt/lists/*
-    
-RUN wget -q --content-disposition https://de.minergate.com/download/xfast-ubuntu-cli && \       
-    dpkg -i *.deb && \
-    rm *.deb
 
 ENV USERNAME minergate@mmink.eu
 ENV COIN --xmr
 
-ENTRYPOINT nice -10 minergate-cli -u $USERNAME $COIN
+ENTRYPOINT nice -10 /minergate/minergate-cli -u $USERNAME $COIN
