@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get -qqy --no-install-recommends  install \
     ca-certificates \
     libxcb1 \
-    libpcre16-3 && \
+    libpcre16-3 \
     wget && \
     rm -rf /var/lib/apt/lists/*
 
