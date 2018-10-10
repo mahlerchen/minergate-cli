@@ -7,7 +7,12 @@ RUN apt-get update && \
     ca-certificates \
     libxcb1 \
     libpcre16-3 && \
+    wget && \
     rm -rf /var/lib/apt/lists/*
+
+RUN wget -q --content-disposition https://minergate.com/download/deb-cli && \
+    dpkg -i *.deb && \
+    rm *.deb
 
 ENV USERNAME minergate@mmink.eu
 ENV COIN --xmr
